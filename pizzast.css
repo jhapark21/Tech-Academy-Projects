@@ -1,0 +1,35 @@
+h1 {
+	color: yellow;
+	font-size: 80px;
+}
+
+h3 {
+	color: red;
+	font-family: arial;
+	font-size: 35px;
+}
+
+.menu {
+	color: green;
+	font-size: 25px;
+
+}
+
+.button {
+	color: blue;
+	display: block;
+	border-radius: .5em;
+	padding: .1px 0 .1px 0px;
+}
+
+body {
+	background: url(pizza.jpg) no-repeat center center fixed;
+	background-color: tan;
+	
+	
+
+}
+
+#showText1, #showText2, #totalPrice1, #totalPrice2 {
+	font-size: 25px;
+}
