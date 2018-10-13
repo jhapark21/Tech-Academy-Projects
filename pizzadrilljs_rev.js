@@ -1,5 +1,5 @@
-function getReceipt() {
-	text1 = ""; 
+function getReceipt() { //this function will let user to choose one of the sizes of the pizza and the price set for it will pass on to next option.
+	text1 = "";  //text1 and text2 will show toppings and prices for them as they are chosen.
 	text2 = ""; 
 	var runningTotal = 0;
 	var sizeTotal = 0;
@@ -27,7 +27,7 @@ function getReceipt() {
 	getMeat(runningTotal,text1,text2); 
 };	
 
-function getMeat(runningTotal,text1,text2) {
+function getMeat(runningTotal,text1,text2) {  //this will let user choose meat options, first option is complimentary and addition will add 1 to the cost adding to the cost of size in the previous function.
 	var runningTotal = runningTotal;
 	var meatTotal = 0;
 	var selectedMeat = [];
@@ -60,7 +60,7 @@ function getMeat(runningTotal,text1,text2) {
 	getVeggie(runningTotal,text1,text2);
 };
 
-function getVeggie(runningTotal,text1,text2) {
+function getVeggie(runningTotal,text1,text2) {  //this does the same as function getMeat and add up to cost of size and meat all together.
 	var veggieTotal = 0;
 	var selectedVeggie = [];
 	var veggieArray = document.getElementsByClassName("veggies");
@@ -92,7 +92,7 @@ function getVeggie(runningTotal,text1,text2) {
 	getCheese(runningTotal,text1,text2);
 };
 
-function getCheese(runningTotal,text1,text2) {
+function getCheese(runningTotal,text1,text2) {  //this function lets user to choose out of three option, only add 3 to the total(runningTotal) when Extra cheese was chosen and no cost on other options.
 	var cheeseTotal = 0;
 	var selectedCheese = [];
 	var cheeseArray = document.getElementsByClassName("cheese");
@@ -110,7 +110,7 @@ function getCheese(runningTotal,text1,text2) {
 	getSauce(runningTotal,text1,text2);
 };
 
-function getSauce(runningTotal,text1,text2) {
+function getSauce(runningTotal,text1,text2) {  //this function lets user to choose any option not cost anything, it will only print on the receipt what the user chooses.
 	var sauceTotal = 0;
 	var selectedSauce = [];
 	var sauceArray = document.getElementsByClassName("sauce");
@@ -124,7 +124,7 @@ function getSauce(runningTotal,text1,text2) {
 	getCrust(runningTotal,text1,text2)
 };
 
-function getCrust(runningTotal,text1,text2) {
+function getCrust(runningTotal,text1,text2) {  //this function lets user to choose any options without any cost, but Cheese Stuuffed Crust will add 3 to the total(runningTotal) cost. 
 	var crustTotal = 0;
 	var selectedCrust = [];
 	var crustArray = document.getElementsByClassName("crust");
@@ -139,36 +139,6 @@ function getCrust(runningTotal,text1,text2) {
 	text1 = text1 + selectedCrust + "<br>";
 	text2 = text2 + crustTotal + "<br>";
 	runningTotal = (runningTotal + crustTotal);
-	giveTip(runningTotal,text1,text2);
-};
-
-function giveTip(runningTotal,text1,text2) {
-	var tipTotal = 0;
-	var selectedTip = [];
-	var tipArray = document.getElementsByClassName("tip");
-	for (var j = 0; j <tipArray.length; j++) {
-		if (tipArray[j].checked) {
-			selectedTip = tipArray[j].value;
-		}
-		if (selectedTip === "$1") {
-			tipTotal = 1;
-		}
-		if (selectedTip === "$2") {
-			tipTotal = 2;
-		}
-		if (selectedTip === "$3") {
-			tipTotal = 3;
-		}
-		if (selectedTip === "$4") {
-			tipTotal = 4;
-		}
-		if (selectedTip === "$5") {
-			tipTotal = 5;
-		}
-	}
-	text1 = text1 + selectedTip + "<br>";
-	text2 = text2 + tipTotal + "<br>";
-	runningTotal = (runningTotal + tipTotal);
 	
 	document.getElementById("showText1").innerHTML=text1;
 	document.getElementById("showText2").innerHTML=text2;

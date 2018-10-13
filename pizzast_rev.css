@@ -2,7 +2,6 @@ h1 {
 	color: yellow;
 	font-size: 80px;
 }
-
 h3 {
 	color: red;
 	font-family: arial;
@@ -33,3 +32,10 @@ body {
 #showText1, #showText2, #totalPrice1, #totalPrice2 {
 	font-size: 25px;
 }
+
+#cart {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
