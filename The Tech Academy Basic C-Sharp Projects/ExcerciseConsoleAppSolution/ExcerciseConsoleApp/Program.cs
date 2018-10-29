@@ -8,26 +8,26 @@ namespace ExcerciseConsoleApp
         static void Main()
         {
 
-            console.writeline("please type in a number");
-            string anynumber = console.readline();
-            double number = convert.todouble(anynumber);
-            string result = (50 * number).tostring();
-            console.writeline(anynumber + " multiplies by 50 is " + result);
-            console.readline();
+            Console.WriteLine("please type in a number");
+            string anynumber = Console.ReadLine();
+            double number = Convert.ToDouble(anynumber);
+            string result = (50 * number).ToString();
+            Console.WriteLine(anynumber + " multiplies by 50 is " + result);
+            Console.ReadLine();
 
-            console.writeline("please type in a number");
-            string anynumber2 = console.readline();
-            double number2 = convert.todouble(anynumber2);
-            string result2 = (number2 + 25).tostring();
-            console.writeline(anynumber2 + " plus 25 is " + result2);
-            console.readline();
+            Console.WriteLine("please type in a number");
+            string anynumber2 = Console.ReadLine();
+            double number2 = Convert.ToDouble(anynumber2);
+            string result2 = (number2 + 25).ToString();
+            Console.WriteLine(anynumber2 + " plus 25 is " + result2);
+            Console.ReadLine();
 
-            console.writeline("please type in a number");
-            string anynumber3 = console.readline();
-            double number3 = convert.todouble(anynumber3);
-            string result3 = (number3 / 12.5).tostring();
-            console.writeline(anynumber3 + " divided by 12.5 is " + result3);
-            console.readline();
+            Console.WriteLine("please type in a number");
+            string anynumber3 = Console.ReadLine();
+            double number3 = Convert.ToDouble(anynumber3);
+            string result3 = (number3 / 12.5).ToString();
+            Console.WriteLine(anynumber3 + " divided by 12.5 is " + result3);
+            Console.ReadLine();
 
             Console.WriteLine("Please type in a number");
             string anyNumber4 = Console.ReadLine();
