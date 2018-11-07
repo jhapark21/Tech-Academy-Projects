@@ -12,30 +12,23 @@ namespace ExerciseMethods_rev
         //Default constructor
         public Math()
         {
-            Number = 0;
+
         }
-
-        //Property
-        public int Number { get; set; }
-        public double doubleNumber { get; set; }
-        public int stringNumber { get; set; }
-
-        //Method multiply
-        public int Multiply(int num)
+        //Passes in an integer, resulting in integer. 
+        public int doMath(int num)
         {
-            return num * Number;
+            return num * 10;
         }
-
-        //Method subtraction
-        public double Subtraction(int num)
+        //Passes in a decimal, resulting in integer.
+        public int doMath(decimal dec)
         {
-            return doubleNumber - num;
+            return Convert.ToInt32(dec - 5);
         }
-
-        //Method addition
-        public int Addition(int num)
+        //Passes in a string, resulting in integer. 
+        public int doMath(string str)
         {
-            return stringNumber + num;
+            return Convert.ToInt32(str) + 60;
+            
         }
 
     }

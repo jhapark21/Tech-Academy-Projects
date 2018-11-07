@@ -13,22 +13,12 @@ namespace ExerciseMethods_rev
 
             Math myMath = new Math();
 
-            Console.WriteLine("Please type in an integer for muliplication.");
-            myMath.Number = Convert.ToInt32(Console.ReadLine());
-            int result = myMath.Multiply(12);
-            Console.WriteLine("Your number multiplied by 12 is: " + result);
-
-            Console.WriteLine("Please choose a decimal to do subtraction.");
-            myMath.doubleNumber = Convert.ToDouble(Console.ReadLine());
-            int result1 = Convert.ToInt32(myMath.Subtraction(10));
-            Console.WriteLine("The result of the subtraction in integer is: " + result1);
-
-            Console.WriteLine("Please choose a number to do addition.");
-            string userNumber = Console.ReadLine();
-            myMath.stringNumber = Convert.ToInt32(userNumber);
-            int result2 = Convert.ToInt32(myMath.Addition(10));
-            Console.WriteLine("The result of the addition in integer is: " + result2);
-
+            //Calls the first method, passing in integer 12 and multiplies by 10.
+            Console.WriteLine(myMath.doMath(12));
+            //Calls the second method, passing in decimal 19.3 and subtracts by 5. 
+            Console.WriteLine(myMath.doMath(19.3m));
+            //Calls the thrid method, passing in string "40" and adds by 60.
+            Console.WriteLine(myMath.doMath("40"));
 
             Console.ReadLine();
 
