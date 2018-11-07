@@ -12,19 +12,25 @@ namespace ExcerciseOptional
         {
             Math myMath = new Math();
 
-            Console.WriteLine("Please type in a first integer for muliplication.");
-            myMath.firstInteger = Convert.ToInt32(Console.ReadLine());
-            int result1 = myMath.Multiply(10);
-            Console.WriteLine("Your number multiplied by 10 is: " + result1);
+            Console.WriteLine("Please type in two integers, but the second integer can be left blank.");
+            string firstInteger = Console.ReadLine();
+            string secondInteger = Console.ReadLine();
 
-            Console.WriteLine("Optional: you do not need to enter anything for this.\n Please type in a second integer for addition.");
-            myMath.secondInteger = Convert.ToInt32(Console.ReadLine());
-            int result2 = myMath.Addition(10);
-            Console.WriteLine("The number added by 10 is: " + result2);
-            
+            int result;
+            if (String.IsNullOrWhiteSpace(secondInteger))
+            {
+                result = myMath.Addition(Convert.ToInt32(firstInteger));
+            }
+            else
+            {
+                result = myMath.Addition(Convert.ToInt32(firstInteger), Convert.ToInt32(secondInteger));
+            }
+
+            Console.WriteLine("The addition of you number(s) is: " + result);
 
             Console.ReadLine();
         }
     }
     
 }
+
