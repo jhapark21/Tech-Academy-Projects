@@ -24,7 +24,7 @@ namespace ExerciseStatic
             num4 = result;
         }
 
-        public void outParameterDecimal(decimal num5, out int num6)
+        public void outParameter(decimal num5, out int num6)
         {
             int result = Convert.ToInt32(num5 * 10 / 2);
             num6 = result;

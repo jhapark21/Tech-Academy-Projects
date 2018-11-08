@@ -27,7 +27,7 @@ namespace ExerciseStatic
             Console.WriteLine("Please type in a decimal to be multiplied by 10 and divided by 2.");
             decimal inputNumber3 = Convert.ToDecimal(Console.ReadLine());
             int outputNumber3;
-            myMath.outParameterDecimal(inputNumber3, out outputNumber3);
+            myMath.outParameter(inputNumber3, out outputNumber3);
             Console.WriteLine("The output number is: " + outputNumber3);
 
             Console.ReadLine();
