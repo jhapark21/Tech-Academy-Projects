@@ -8,13 +8,16 @@ namespace ExerciseVariable
 {
     class Founded
     {
-        
+        public string Name { get; set; }
         public int Year { get; set; }
 
-        public Founded (int year)
+        public Founded (string name, int year)
         {
+            Name = name;
             Year = year;
         }
-
+        public Founded (int year) : this("Grand Hotel and Casino", year)
+        {
+        }
     }
 }
