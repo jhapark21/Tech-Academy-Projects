@@ -1,0 +1,43 @@
+	//Changeset #460: On the login page, update VerifyUserForClock so that it submits the entire "login" form
+	
+	
+	<script>
+    function VerifyUserForClock() {
+        /**
+         * check both fields are filled in before submitting clockin/clockout form
+         */
+        var validForm = true;
+        if ($.trim($("#UserName").val()) == "") {
+            $("#username-error-msg").html("The Username/Email field is required.");   
+            validForm = false;
+        }
+        if ($.trim($("#PassWord").val()) == "") {
+            $("#password-error-msg").html("The Password field is required.");
+            validForm = false;
+        }
+        if (!validForm) return;
+
+		/*serializes clockin/clockout form, #UserName and #PassWord and submits the entire form.*/
+        var login = $('#loginForm').serialize();
+
+        $.post({
+            url: "@Url.Action("VerifyUserForClock", "Account")",
+            data: login,
+            success: function (data) {
+                
+                if (data.verified == false) {
+                    $('#ErrorMessages').text("There was a problem with your credentials or account status. Please try again or contact your system administrator if the problem continues.").css("color", "red");
+
+                } else  {
+
+                    $('#clock-modal').modal('show');
+                    $('#modal-note').text(data.EventNotes);
+                    $('#checkin-modal-title').text(data.userLastName + ", " + data.userFirstName);
+                }
+                
+            },
+            error: function () {
+                alert('Fail');
+            }
+        })
+    }

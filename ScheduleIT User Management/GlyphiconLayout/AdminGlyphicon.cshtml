@@ -1,0 +1,67 @@
+<!--Changeset #482: Change the Schedule link in both layouts to the inclueded glyphicon-calendar -->
+
+<!-- On the navigation bar of the admin panel, Schedule is changed to the glyphicon-calendar icon -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/Admincss")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/fullcalendar")
+    @RenderSection("scripts", required: false)
+
+
+</head>
+<body>
+    <div class="navbar navbar-default bg-primary navbar-fixed-top danger">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @* NAV LOGO *@
+                <div id="logo-box">
+                    <a href="~/Account/Login"> <img class="" id="nav-logo" src="~/Images/The-Tech-Academy-Logo.png" /></a>
+                </div>
+                @*END NAV LOGO*@
+            </div>
+            <div class="navbar-collapse collapse" style="width: 100%;">
+                <ul class="nav navbar-nav">
+                    <li title="User Panel">
+                        @Html.ActionLink(" ", "Index", "Home", new { area = "" }, new {@class = "glyphicon glyphicon-home" })
+                    </li>
+                    <li title="Employee Info">
+                        @Html.ActionLink("Employees", "Index", "User")
+                    </li>
+                    <li title="Schedules">
+                        @Html.ActionLink(" ", "Index", "Schedule", null, new {@class = "glyphicon glyphicon-calendar"})
+                    </li>
+                    @Html.Action("RequestCount","User")
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+    <div id="fixed-footer">
+        <footer>
+            <p>ScheduleIt - &copy; @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+
+</body>
+</html>
