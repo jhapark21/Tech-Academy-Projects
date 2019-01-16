@@ -1,0 +1,246 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#nav-bar {
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.navbar-nav li {
+	padding: 0 10px;
+}
+
+.navbar-nav li a {
+	float: right;
+	text-align: left;
+}
+
+#nav-bar ul li a: hover {
+	color: #007bff!important;
+}
+
+.navbar {
+	background: #fff;
+}
+
+.navbar-toggler {
+	border: none!important;
+}
+
+.nav-link {
+	color: #555!important;
+	font-weight: 600;
+	font-size: 16px;
+}
+
+/* Slider */
+#slider {
+	width: 100%;
+}
+
+#slider h5 {
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))
+}
+
+.carousel-caption {
+	top: 40%;
+	transform: translateY(-50%);
+	bottom: initial!important;
+}
+
+.carousel-caption h5 {
+	color: #fff;
+	font-size: 60px;
+}
+/* Features */
+#feature {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/ft1.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+	padding: 100px;
+	font-size: 23px;
+}
+
+.features {
+	padding-top: 20px;
+	text-align: center;
+}
+
+.features h3 {
+	color: #00ffff;
+}
+
+.icon {
+	font-size: 50px;
+	padding-bottom: 20px;
+}
+
+
+/* Staffs */
+#staff {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/stb.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+	padding: 100px;
+	font-size: 20px;
+}
+
+#staff h3 {
+	color: #00ffff;
+	padding-bottom: 10px;
+}
+
+h1 {
+	text-align: center;
+	color: #fff!important;
+	padding-bottom: 10px;
+}
+	
+h1::after {
+	content: '';
+	background: blue;
+	display: block;
+	height: 2px;
+	width: 150px;
+	margin: 20px auto 5px;
+}
+
+.profile {
+	margin-top: 25px;
+	padding: 50px 10px 10px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3));
+}
+
+.profile .image {
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+
+.profile h2 {
+	color: white;
+	padding-bottom: 5px;
+}
+
+/* Membership */
+#membership {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/m1.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+	padding: 100px;
+	font-size: 20px;
+}
+#membership h1 {
+	color: #fff!
+	text-align: center;
+}
+
+#membership h3 {
+	text-align: center;
+	color: red;
+	padding-bottom: 15px;
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
+}
+
+.member-price {
+	margin: 10px auto;
+	display: inline;
+	float: left;
+	width: 100%;
+	background-color: #fff;
+	transition: 0.5s;
+}
+
+.member-price:hover {
+	box-shadow: 10px 10px 30px red;
+}
+
+.basic-price {
+	background-color: #32cd32;
+	display: inline;
+	float: left;
+	padding: 10px 5px;
+	text-align: center;
+	width: 100%;
+}
+
+.basic-content ul li {
+	border-bottom: 1px solid;	
+	padding: 15px 10px;
+	list-style: none;
+	color: blue;
+}
+
+.fa-check-circle {
+	color: green;
+	margin-right: 15px;
+	margin-left: 10px;
+}
+
+.fa-times-circle {
+	color: red;
+	margin-right: 15px;
+	margin-left: 10px;
+}
+
+.price-click {
+	text-align: center;
+	text-decoration: underline;
+	padding-bottom: 20px;
+}
+
+.member-btn {
+	background-color: blue;
+	color: white;
+	border-radius: 2px;
+	display: inline-block;
+	padding: 15px; 20px;
+}
+
+#membership h2 {
+	color: #480082;
+}
+
+#membership p {
+	color: black;
+}
+
+/* Contact */
+
+#contact {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(img/ct.jpg);
+	background-size: cover;
+	color: #fff;
+	background-attachment: fixed;
+	padding: 100px;
+	font-size: 20px;
+}
+
+.form {
+	padding: 15px;
+}
+
+.contact-info {
+	padding-top: 10px;
+	color: white;
+	font-size: 25px;
+	background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1))
+}
+
+.address {
+	padding: 5px;
+}
